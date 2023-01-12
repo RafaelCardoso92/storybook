@@ -1,5 +1,6 @@
 import styles from "./form.module.scss";
 import Button from "../button/button";
+import { useState } from "react";
 interface formProps {
   variant: string;
   borderColor: string;
@@ -7,14 +8,12 @@ interface formProps {
 }
 
 export default function Form(props: formProps) {
+  const [details, setDetails] = useState(false);
   const submitHandler = () => {
-    if (props.variant === "primary") {
-      alert("This is a primary button");
-      //my special error
-      //props.variant = "something";
-    } else if (props.variant === "secondary") {
-      alert("This is a secondary button");
-    }
+    console.log("Email sent");
+    setDetails(true);
+    //my special error
+    //props.variant = "something";
   };
   return (
     <div
@@ -25,18 +24,34 @@ export default function Form(props: formProps) {
         <h1>Form</h1>
       </div>
       <div className={styles.formBody}>
-        <form onSubmit={submitHandler}>
+        <div>
           <div className={`${styles.formRow} ${styles[props.variant]}`}>
-            <label htmlFor="name">First Name:</label>
-            <input name="name" type="text" className={styles.formInput} />
-            <label htmlFor="lname">Last Name:</label>
-            <input name="lname" type="text" className={styles.formInput} />
+            <label htmlFor="name">Name:</label>
+            <input
+              data-testid="name"
+              name="name"
+              type="text"
+              className={styles.formInput}
+            />
             <label htmlFor="email">Email:</label>
-            <textarea name="email" className={styles.formInput} />
+            <input
+              data-testid="email"
+              name="email"
+              type="email"
+              className={styles.formInput}
+            />
+            <label htmlFor="message">Message</label>
+            <textarea
+              data-testid="message"
+              name="message"
+              className={styles.formInput}
+            />
           </div>
           <div className={styles.buttonContainer}>
             <div className={styles.button}>
               <Button
+                onClick={submitHandler}
+                data-testid="submit"
                 type="submit"
                 variant="secondary"
                 size="small"
@@ -44,7 +59,8 @@ export default function Form(props: formProps) {
               />
             </div>
           </div>
-        </form>
+          {details === true ? <p>Email sent</p> : ""}
+        </div>
       </div>
     </div>
   );
