@@ -38,7 +38,7 @@ export default function Form(props: formProps) {
             <div className={styles.button}>
               <Button
                 type="submit"
-                variant="primary"
+                variant="secondary"
                 size="small"
                 text="Send Email"
               />
