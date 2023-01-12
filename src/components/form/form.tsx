@@ -23,6 +23,7 @@ export default function Form(props: formProps) {
     >
       <div className={styles.formHeader} style={{ color: props.color }}>
         <h1>Form</h1>
+        <h1>Form</h1>
       </div>
       <div className={styles.formBody}>
         <form onSubmit={submitHandler}>
