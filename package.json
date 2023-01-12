@@ -9,7 +9,8 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "chromatic": "npx chromatic --project-token=d5cf67ffa5af"
   },
   "dependencies": {
     "@next/font": "13.1.1",
@@ -47,5 +48,7 @@
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "example-test@0.1.0"
 }
