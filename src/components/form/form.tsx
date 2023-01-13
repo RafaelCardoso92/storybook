@@ -25,27 +25,33 @@ export default function Form(props: formProps) {
       </div>
       <div className={styles.formBody}>
         <div>
-          <div className={`${styles.formRow} ${styles[props.variant]}`}>
-            <label htmlFor="name">Name:</label>
-            <input
-              data-testid="name"
-              name="name"
-              type="text"
-              className={styles.formInput}
-            />
-            <label htmlFor="email">Email:</label>
-            <input
-              data-testid="email"
-              name="email"
-              type="email"
-              className={styles.formInput}
-            />
-            <label htmlFor="message">Message</label>
-            <textarea
-              data-testid="message"
-              name="message"
-              className={styles.formInput}
-            />
+          <div className={styles.formRow}>
+            <label htmlFor="name" style={{ color: props.color }}>
+              Name:
+              <input
+                className={`${styles.formInput} ${styles[props.variant]}`}
+                data-testid="name"
+                name="name"
+                type="text"
+              />
+            </label>
+            <label htmlFor="email" style={{ color: props.color }}>
+              Email:
+              <input
+                data-testid="email"
+                name="email"
+                type="email"
+                className={`${styles.formInput} ${styles[props.variant]}`}
+              />
+            </label>
+            <label htmlFor="message" style={{ color: props.color }}>
+              Message
+              <textarea
+                data-testid="message"
+                name="message"
+                className={`${styles.formInput} ${styles[props.variant]}`}
+              />
+            </label>
           </div>
           <div className={styles.buttonContainer}>
             <div className={styles.button}>
