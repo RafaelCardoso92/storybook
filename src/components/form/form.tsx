@@ -28,30 +28,32 @@ export default function Form(props: formProps) {
           <div className={styles.formRow}>
             <label htmlFor="name" style={{ color: props.color }}>
               Name:
-              <input
-                className={`${styles.formInput} ${styles[props.variant]}`}
-                data-testid="name"
-                name="name"
-                type="text"
-              />
             </label>
+            <input
+              className={`${styles.formInput} ${styles[props.variant]}`}
+              data-testid="name"
+              name="name"
+              type="text"
+            />
+
             <label htmlFor="email" style={{ color: props.color }}>
               Email:
-              <input
-                data-testid="email"
-                name="email"
-                type="email"
-                className={`${styles.formInput} ${styles[props.variant]}`}
-              />
             </label>
+            <input
+              data-testid="email"
+              name="email"
+              type="email"
+              className={`${styles.formInput} ${styles[props.variant]}`}
+            />
+
             <label htmlFor="message" style={{ color: props.color }}>
               Message
-              <textarea
-                data-testid="message"
-                name="message"
-                className={`${styles.formInput} ${styles[props.variant]}`}
-              />
             </label>
+            <textarea
+              data-testid="message"
+              name="message"
+              className={`${styles.formInput} ${styles[props.variant]}`}
+            />
           </div>
           <div className={styles.buttonContainer}>
             <div className={styles.button}>
