@@ -13,7 +13,7 @@ export default function Form(props: formProps) {
     console.log("Email sent");
     setDetails(true);
     //my special error
-    //props.variant = "something";
+    props.variant = "something";
   };
   return (
     <div
