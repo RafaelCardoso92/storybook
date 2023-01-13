@@ -1,5 +1,7 @@
 .container {
   margin: 1rem;
+  //remove this margin
+  margin-left: 1rem;
 }
 .primary {
   cursor: pointer;
@@ -49,6 +51,7 @@
 .small {
   width: 100%;
   height: 2rem;
-  font-size: 1.1rem;
+  //make the font bigger here
+  font-size: 1rem;
   padding: 0.5rem 1rem;
 }
