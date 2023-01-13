@@ -27,6 +27,7 @@ Primary.play = async ({ canvasElement }) => {
 
   // 👇 Assert DOM structure
   await expect(canvas.getByText("Email sent")).toBeInTheDocument();
+  await expect(canvas.getByText("Something")).toBeInTheDocument();
 };
 
 Primary.args = {
