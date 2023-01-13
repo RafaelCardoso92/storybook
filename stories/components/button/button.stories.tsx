@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button from "../../../src/components/button/button";
 import { within, userEvent } from "@storybook/testing-library";
-import { expect } from "@storybook/jest";
+
 export default {
   title: "Button",
   component: Button,
@@ -19,6 +19,20 @@ Primary.play = async ({ canvasElement }) => {
 };
 
 Primary.args = {
+  variant: "primary",
+  size: "small",
+  text: "Button Text",
+};
+
+export const Secondary = Template.bind({});
+
+Primary.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  await userEvent.click(canvas.getByRole("button"));
+};
+
+Secondary.args = {
   variant: "secondary",
   size: "small",
   text: "Button Text",
