@@ -19,7 +19,7 @@ export default function Button(props: buttonProps) {
         } `}
       >
         {props.text}
-      </button>
+      
     </div>
   );
 }
