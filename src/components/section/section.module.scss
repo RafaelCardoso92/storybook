@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.imageSection {
+  max-width: 20rem;
+}
+.imageSection img {
+  width: 100%;
+  height: auto;
+}
+.textSection {
+  max-width: 20rem;
+}

@@ -3,6 +3,9 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Form from "../src/components/form/form";
+import Section from "../src/components/section/section";
+import SectionImage from "../src/images/img_lights.jpg";
+
 const inter = Inter({ subsets: ["latin"] });
 interface Props {}
 export default function Home(props: Props) {
@@ -36,6 +39,16 @@ export default function Home(props: Props) {
         </div>
         <div className={styles.form}>
           <Form variant="primary" borderColor="white" color="white" />
+        </div>
+        <div className={styles.section}>
+          <Section
+            title="Title"
+            text="Some text"
+            src={SectionImage}
+            alt="image description"
+            width={600}
+            height={400}
+          />
         </div>
       </main>
     </>

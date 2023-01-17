@@ -13,7 +13,7 @@ export default function Form(props: formProps) {
     console.log("Email sent");
     setDetails(true);
     //my special error
-    //props.variant = "something";
+    props.variant = "something";
   };
   return (
     <div
@@ -68,6 +68,9 @@ export default function Form(props: formProps) {
             </div>
           </div>
           {details === true ? <p>Email sent</p> : ""}
+
+          {/* My wrong result */}
+          {props.variant === "something" ? <p>Something</p> : ""}
         </div>
       </div>
     </div>
