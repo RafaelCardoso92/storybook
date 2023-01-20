@@ -1,11 +1,15 @@
 .container {
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  border: 3px solid white;
 }
 .imageSection {
   max-width: 20rem;
+  // add this
+  //padding: 1rem;
 }
 .imageSection img {
   width: 100%;
@@ -13,4 +17,5 @@
 }
 .textSection {
   max-width: 20rem;
+  margin: auto;
 }
