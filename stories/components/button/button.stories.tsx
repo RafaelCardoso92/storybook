@@ -10,30 +10,57 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const PrimarySmall = Template.bind({});
 
-Primary.play = async ({ canvasElement }) => {
+PrimarySmall.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
   await userEvent.click(canvas.getByRole("button"));
 };
 
-Primary.args = {
+PrimarySmall.args = {
   variant: "primary",
   size: "small",
   text: "Button Text",
 };
 
-export const Secondary = Template.bind({});
+export const PrimaryBig = Template.bind({});
 
-Primary.play = async ({ canvasElement }) => {
+PrimaryBig.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
   await userEvent.click(canvas.getByRole("button"));
 };
 
-Secondary.args = {
+PrimaryBig.args = {
+  variant: "primary",
+  size: "big",
+  text: "Button Text",
+};
+
+export const SecondarySmall = Template.bind({});
+
+SecondarySmall.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  await userEvent.click(canvas.getByRole("button"));
+};
+
+SecondarySmall.args = {
   variant: "secondary",
   size: "small",
+  text: "Button Text",
+};
+export const SecondaryBig = Template.bind({});
+
+SecondaryBig.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  await userEvent.click(canvas.getByRole("button"));
+};
+
+SecondaryBig.args = {
+  variant: "secondary",
+  size: "big",
   text: "Button Text",
 };
